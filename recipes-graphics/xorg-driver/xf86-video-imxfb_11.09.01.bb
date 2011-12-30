@@ -18,7 +18,7 @@ SRC_URI[sha256sum] = "d7d85e9f13c6dd58addab89847f3a8a67f6382a54135c7978c9a95368a
 FILES_${PN} += " ${libdir}/xorg/modules/drivers/*.so"
 FILES_${PN}-dbg += " ${libdir}/xorg/modules/drivers/.debug"
 EXTRA_OECONF_armv7a = " --enable-neon "
-CFLAGS += " -I${STAGING_INCDIR}/xorg "
+CFLAGS += " -I${STAGING_INCDIR}/xorg -I${STAGING_KERNEL_DIR}/include"
 
 S = "${WORKDIR}/xserver-xorg-video-imx-${PV}"
 
